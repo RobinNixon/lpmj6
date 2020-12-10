@@ -10,6 +10,6 @@
 
 <p>To read the examples as you work through the book you can view them here in a folder structure matching the chapters in the book.</p>
 
-<p>Once you have a web server set up, copy the entire structure of folders and subfolders into your document root directory by downloading and extracting <i<lpmj6examples.zip</i> from this repo, and you'll easily be able to navigate through all the examples by typing <i>localhost</i> into your web browser.
+<p>Once you have a web server set up, copy the entire structure of folders and subfolders into your document root directory by downloading and extracting <i>lpmj6examples.zip</i> from this repo, and you'll easily be able to navigate through all the examples by typing <i>localhost</i> into your web browser.
     
 <p><b>Note</b>: The <i>robinsnest</i> folder link will issue errors when clicked unless you have previously created both a MySQL user and database called <i>robinsnest</i>, and run the <i>setup.php</i> program in this folder, as outlined in Chapter 29.</p>
