@@ -2,7 +2,7 @@
 
 <h2>Thanks for downloading these examples</h2>
 
-<p>All the files are in the folders named <i>3</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://ampps.com/'>Ampps</a>) to run many of the examples - please see Chapter 2 for full details.</p>
+<p>All the files are in the folders named <i>3</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://ampps.com/'>Ampps</a>) to run many of the examples - please see <i>Chapter 2</i> for full details.</p>
 
 <p>As well as being saved in their chapter number folder, the Robin's Nest example files are also in the folder <i>robinsnest</i>, so that you can copy the folder to a web server to try for yourself. Please read the final chapter for details on setting up the database etc. Examples that require specific file names to run are also saved in the <i>named_examples</i> folder. All the other information you need to run, understand and modify these examples can be found in the book.</p>
 
@@ -10,6 +10,6 @@
 
 <p>To read the examples as you work through the book you can view them here in a folder structure matching the chapters in the book.</p>
 
-<p>Once you have a web server set up, copy the entire structure of folders and subfolders into your document root directory by downloading and extracting <a href='https://github.com/RobinNixon/lpmj6/blob/master/lmpj6examples.zip'>lpmj6examples.zip</a>, and you'll easily be able to navigate through them by typing <i>localhost</i> into your web browser.
+<p>Once you have a web server set up, copy the entire structure of folders and subfolders into your document root directory by downloading and extracting <i<lpmj6examples.zip</i> from this repo, and you'll easily be able to navigate through all the examples by typing <i>localhost</i> into your web browser.
     
 <p><b>Note</b>: The <i>robinsnest</i> folder link will issue errors when clicked unless you have previously created both a MySQL user and database called <i>robinsnest</i>, and run the <i>setup.php</i> program in this folder, as outlined in Chapter 29.</p>
