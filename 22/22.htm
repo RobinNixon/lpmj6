@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Traversal: Siblings</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <ul>
+      <li          class='new'>Item 1</li>
+      <li id='two' class='new'>Item 2</li>
+      <li                     >Item 3</li>
+      <li          class='new'>Item 4</li>
+      <li          class='new'>Item 5</li>
+      <li                     >Item 6</li>
+      <li                     >Item 7</li>
+    </ul>
+    <script>
+      $('#two').siblings('.new').css('font-weight', 'bold')
+
+      // Alternative to select from all siblings, including the callee
+      // $('#two').parent().children('.new').css('font-weight', 'bold')
+    </script>
+  </body>
+</html>

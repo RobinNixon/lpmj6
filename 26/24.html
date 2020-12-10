@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scaling</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='420' height='200'></canvas>
+    
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+
+      myimage     = new Image()
+      myimage.src = 'image.png'
+
+      myimage.onload = function()
+      {
+        context.drawImage(myimage, 0, 0)
+        context.scale(3, 2)
+        
+        // Alternative to above using transform()
+        // context.transform(3, 0, 0, 2, 0, 0)
+
+        context.drawImage(myimage, 40,   0)
+        context.scale(.33, .5)
+        context.drawImage(myimage,  0, 100)
+
+        // Improved version using save() and restore()
+        //
+        // context.drawImage(myimage, 0, 0)
+        // context.save()
+        // context.scale(3, 2)
+        // context.drawImage(myimage, 40, 0)
+        // context.restore()
+        // context.drawImage(myimage, 0, 100)
+      }
+    </script>
+  </body>
+</html>

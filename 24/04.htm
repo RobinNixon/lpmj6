@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using props and components</title>
+
+    <script src='react.development.js'    ></script>
+    <script src='react-dom.development.js'></script>
+    <script src="babel.min.js">            </script>
+
+    <script type="text/babel">
+      function Welcome(props)
+      {
+        return <h1>Hello, {props.name}</h1>
+      }
+
+      doRender(<Welcome name='Robin' />, 'hello')
+
+      function doRender(elem, dest)
+      {
+        ReactDOM.render(elem, document.getElementById(dest))
+      }
+    </script>
+  </head>
+  <body>
+    <div id="hello" style='font-family:monospace'></div>
+  </body>
+</html>

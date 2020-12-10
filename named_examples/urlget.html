@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html> <!-- urlget.html -->
+  <head>
+    <title>Asynchronous Communication Example</title>
+  </head>
+  <body style='text-align:center'>
+    <h1>Loading a web page into a DIV</h1>
+    <div id='info'>This sentence will be replaced</div>
+
+    <script>
+      nocache = "&nocache=" + Math.random() * 1000000
+      request = new asyncRequest()
+      request.open("GET", "urlget.php?url=news.com" + nocache, true)
+
+      request.onreadystatechange = function()
+      {
+        if (this.readyState == 4)
+        {
+          if (this.status == 200)
+          {
+            if (this.responseText != null)
+            {
+              document.getElementById('info').innerHTML =
+                this.responseText
+            }
+            else alert("Communication error: No data received")
+          }
+          else alert( "Communication error: " + this.statusText)
+        }
+      }
+
+      request.send(null)
+
+      function asyncRequest()
+      {
+        try
+        {
+          var request = new XMLHttpRequest()
+        }
+        catch(e1)
+        {
+          try
+          {
+            request = new ActiveXObject("Msxml2.XMLHTTP")
+          }
+          catch(e2)
+          {
+            try
+            {
+              request = new ActiveXObject("Microsoft.XMLHTTP")
+            }
+            catch(e3)
+            {
+              request = false
+            }
+          }
+        }
+        return request
+      }
+    </script>
+  </body>
+</html>

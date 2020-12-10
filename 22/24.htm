@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using is</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <div><button>Button in a div</button></div>
+    <div><button>Button in a div</button></div>
+    <span><button>Button in a span</button></span>
+    <div><button>Button in a div</button></div>
+    <span><button>Button in a span</button></span>
+    <p id='info'></p>
+    <script>
+      $('button').click(function()
+      {
+        var elem = ''
+
+        if ($(this).parent().is('div')) elem = 'div'
+        else                            elem = 'span'
+
+        $('#info').html('You clicked a ' + elem)
+      })
+    </script>
+  </body>
+</html>

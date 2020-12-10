@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pattern Fill</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='640' height='240'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+      
+      image     = new Image()
+      image.src = 'image.png'
+
+      image.onload = function()
+      {
+        pattern           = context.createPattern(image, 'repeat')
+        context.fillStyle = pattern
+        context.fillRect(20, 20, 600, 200)
+      }
+    </script>
+  </body>
+</html>

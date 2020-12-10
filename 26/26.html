@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rotating (b)</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='500' height='140'></canvas>
+    
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+
+      myimage     = new Image()
+      myimage.src = 'image.png'
+
+      myimage.onload = function()
+      {
+        w = myimage.width
+        h = myimage.height
+
+        for (j = 0 ; j < 4 ; ++j)
+        {
+          context.save()
+          context.translate(20 + w / 2 + j * (w + 20), 20 + h / 2)
+
+          // Alternative to the above using transform()
+          // context.transform(1, 0, 0, 1, 20 + w / 2 + j * (w + 20), 20 + h / 2)
+
+          context.rotate(Math.PI / 5 * j)
+          context.drawImage(myimage, -(w / 2), -(h / 2))
+          context.restore()
+        }
+      }
+    </script>
+  </body>
+</html>

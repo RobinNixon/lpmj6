@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JSX conditional statement</title>
+
+    <script src='react.development.js'    ></script>
+    <script src='react-dom.development.js'></script>
+    <script src="babel.min.js">            </script>
+
+    <script type="text/babel">
+      class Setup extends React.Component
+      {
+        constructor(props)
+        {
+          super(props)
+          this.highScore    = 90
+          this.currentScore = 100
+        }
+
+        render()
+        {
+          return (
+            <div>
+              {
+                this.currentScore > this.highScore &&
+                  <h1>New High Score</h1>
+              }
+            </div>
+          )
+        }
+      }
+
+      doRender(<Setup />, 'display')
+
+      function doRender(elem, dest)
+      {
+        ReactDOM.render(elem, document.getElementById(dest))
+      }
+    </script>
+  </head>
+  <body>
+    <div id='display' style='font-family:monospace'></div>
+  </body>
+</html>

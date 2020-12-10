@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Effects: Fading</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <button id='fadeout'>fadeOut</button>
+    <button id='fadein'>fadeIn</button>
+    <button id='fadetoggle'>fadeToggle</button>
+    <button id='fadeto'>fadeTo</button>
+    <p id='text'>Click the buttons above</p>
+    <script>
+      $('#fadeout')   .click(function() { $('#text').fadeOut(   'slow'     ) })
+      $('#fadein')    .click(function() { $('#text').fadeIn(    'slow'     ) })
+      $('#fadetoggle').click(function() { $('#text').fadeToggle('slow'     ) })
+      $('#fadeto')    .click(function() { $('#text').fadeTo(    'slow', 0.5) })
+    </script>
+  </body>
+</html>

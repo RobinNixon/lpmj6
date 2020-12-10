@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bezier Curves</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='480' height='240'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+
+      context.beginPath()
+      context.moveTo(240, 20)
+      context.bezierCurveTo(720, 480, -240, -240, 240, 220)
+      context.stroke()
+      context.closePath()
+    </script>
+  </body>
+</html>

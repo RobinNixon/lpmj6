@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Web Messaging (a)</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <iframe id='frame' src='07.html' width='360' height='75'></iframe>
+
+    <script>
+      count = 1
+
+      setInterval(function()
+      {
+        O('frame').contentWindow.postMessage('Message ' + count++, '*')
+      }, 1000)   
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Compositing</title>
+    <script src='OSC.js'></script>
+    <style>
+      .compositing {
+        font-family:'courier new';
+        font-size  :9pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='compositing'>
+      <canvas class='canvas' id='c1'  width='120' height='120'></canvas>
+      <canvas class='canvas' id='c2'  width='120' height='120'></canvas>
+
+      <canvas class='canvas' id='c3'  width='120' height='120'></canvas>
+      <canvas class='canvas' id='c4'  width='120' height='120'></canvas>
+      <br>
+      &nbsp;&nbsp; source-over &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      source-in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; source-out
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; source-atop<br>
+
+        
+      <canvas class='canvas' id='c5'  width='120' height='120'></canvas>
+      <canvas class='canvas' id='c6'  width='120' height='120'></canvas>
+      <canvas class='canvas' id='c7'  width='120' height='120'></canvas>
+      <canvas class='canvas' id='c8'  width='120' height='120'></canvas>
+      <br>
+      destination-over &nbsp; destination-in &nbsp;&nbsp;&nbsp;
+      destination-out &nbsp; destination atop<br>
+
+      <canvas class='canvas' id='c9'  width='120' height='120'></canvas>
+      <canvas class='canvas' id='c10' width='120' height='120'></canvas>
+      <canvas class='canvas' id='c11' width='120' height='120'></canvas>
+      <canvas class='canvas' id='c12' width='120' height='120'></canvas>
+      <br>
+      &nbsp;&nbsp;&nbsp; &nbsp;lighter
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; darker
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+      &nbsp;copy &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;xor
+    </div>
+    
+    <script>
+      image     = new Image()
+      image.src = 'image.png'
+
+      image.onload = function()
+      {
+        types =
+        [
+          'source-over',     'source-in',        'source-out',
+          'source-atop',     'destination-over', 'destination-in',
+          'destination-out', 'destination-atop', 'lighter',
+          'darker',          'copy',             'xor'
+        ]
+
+        for (j = 0 ; j < 12 ; ++j)
+        {
+          canvas               = O('c' + (j + 1))
+          context              = canvas.getContext('2d')
+          S(canvas).background = 'lightblue'
+          context.fillStyle    = 'red'
+
+          context.arc(50, 50, 50, 0, Math.PI * 2, false)
+          context.fill()
+          context.globalCompositeOperation = types[j]
+          context.drawImage(image, 20, 20, 100, 100)
+        }
+      }
+    </script>
+  </body>
+</html>

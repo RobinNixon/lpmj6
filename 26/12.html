@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawing Lines</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='535' height='360'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+      context.fillStyle    = 'red'
+      context.font         = 'bold 13pt Courier'
+      context.strokeStyle  = 'blue'
+      context.textBaseline = 'top'
+      context.lineWidth    = 20
+      caps                 = ['butt',  'round', 'square']
+      joins                = ['round', 'bevel', 'miter']
+
+      for (j = 0 ; j < 3 ; ++j)
+      {
+        for (k = 0 ; k < 3 ; ++k)
+        {
+          context.lineCap  = caps[j]
+          context.lineJoin = joins[k]
+
+          context.fillText(' cap:' + caps[j],  33 + j * 180, 45 + k * 120)
+          context.fillText('join:' + joins[k], 33 + j * 180, 65 + k * 120)
+
+          context.beginPath()         
+          context.moveTo( 20 + j * 180, 100 + k * 120)
+          context.lineTo( 20 + j * 180,  20 + k * 120)
+          context.lineTo(155 + j * 180,  20 + k * 120)
+          context.lineTo(155 + j * 180, 100 + k * 120)
+          context.stroke()
+          context.closePath()
+        }
+      }
+    </script>
+  </body>
+</html>

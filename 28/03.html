@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> <!-- webworkers.html -->
+  <head>
+    <title>Web Workers</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    Current highest prime number:
+    <span id='result'>0</span>
+
+    <script>
+      if (!!window.Worker)
+      {
+        var worker = new Worker('worker.js')
+
+        worker.onmessage = function (event)
+        {
+          O('result').innerText = event.data;
+        }
+      }
+      else
+      {
+        alert("Web workers not supported")
+      }
+    </script>
+  </body>
+</html>

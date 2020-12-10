@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Event handling</title>
+
+    <script src='react.development.js'    ></script>
+    <script src='react-dom.development.js'></script>
+    <script src="babel.min.js">            </script>
+
+    <script type="text/babel">
+      class Toggle extends React.Component
+      {
+        constructor(props)
+        {
+          super(props)
+          this.state       = {isVisible: true}
+          this.handleClick = this.handleClick.bind(this)
+        }
+
+        handleClick()
+        {
+          this.setState(state => ({isVisible: !state.isVisible}))
+        }
+
+        render()
+        {
+          const show = this.state.isVisible
+
+          return (
+            <div>
+              <button onClick={this.handleClick}>
+                {show ? 'HIDE' : 'DISPLAY'}
+              </button>
+              <p>{show ? 'Here is some text' : ''}</p>
+            </div>
+          )
+        }
+      }
+
+      doRender(<Toggle />, 'display')
+
+      function doRender(elem, dest)
+      {
+        ReactDOM.render(elem, document.getElementById(dest))
+      }
+    </script>
+  </head>
+  <body>
+    <div id='display' style='font-family:monospace'></div>
+  </body>
+</html>

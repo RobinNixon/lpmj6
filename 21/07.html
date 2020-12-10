@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Non-inline JavaScript</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <img id='object' src='apple.png'>
+
+    <script>
+      O('object').onmouseover = function() { this.src = 'orange.png' }
+      O('object').onmouseout  = function() { this.src = 'apple.png'  }
+    </script> 
+  </body>
+</html>
+
+

@@ -1,0 +1,84 @@
+/* Example 13: styles.css */
+
+* {
+  font-family:verdana,sans-serif;
+  font-size  :14pt;
+}
+
+body {
+  width     :700px;
+  margin    :20px auto;
+  background:#f8f8f8;
+  border    :1px solid #888;
+}
+
+html {
+  background:#fff
+}
+
+img {
+  border            :1px solid black;
+  margin-right      :15px;
+  -moz-box-shadow   :2px 2px 2px #888;
+  -webkit-box-shadow:2px 2px 2px #888;
+  box-shadow        :2px 2px 2px #888;
+}
+
+.username {
+  text-align :center;
+  background :#eb8;
+  color      :#40d;
+  font-family:helvetica;
+  font-size  :20pt;
+  padding    :4px;
+}
+
+.info {
+  font-style :italic;
+  margin     :40px 0px;
+  text-align :center;
+}
+
+.center {
+  text-align:center;
+}
+
+.subhead {
+  font-weight:bold;
+}
+
+.taken, .error {
+  color:red;
+}
+
+.available {
+  color:green;
+}
+
+.whisper {
+  font-style:italic;
+  color     :#006600;
+}
+
+#logo {
+  font-family:Georgia;
+  font-weight:bold;
+  font-style :italic;
+  font-size  :97px;
+  color      :red;
+  }
+
+#robin {
+  position          :relative;
+  border            :0px;
+  margin-left       :-6px;
+  margin-right      :0px;
+  top               :17px;
+	-moz-box-shadow   :0px 0px 0px;
+	-webkit-box-shadow:0px 0px 0px;
+	box-shadow        :0px 0px 0px;
+}
+
+#used {
+  margin-top:50px;
+}

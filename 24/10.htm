@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using text input</title>
+
+    <script src='react.development.js'    ></script>
+    <script src='react-dom.development.js'></script>
+    <script src="babel.min.js">            </script>
+
+    <script type="text/babel">
+      class GetName extends React.Component
+      {
+        constructor(props)
+        {
+          super(props)
+          this.state    = {value: ''}
+          this.onChange = this.onChange.bind(this)
+          this.onSubmit = this.onSubmit.bind(this)
+        }
+
+        onChange(event)
+        {
+          this.setState({value: event.target.value})
+        }
+
+        onSubmit(event)
+        {
+          alert('You submitted: ' + this.state.value)
+          event.preventDefault()
+        }
+
+        render()
+        {
+          return (
+            <form onSubmit={this.onSubmit}>
+              <label>
+                Name:
+                <input type="text" value={this.state.value}
+                                onChange={this.onChange} />
+              </label>
+              <input type="submit" />
+            </form>
+          )
+        }
+      }
+
+      doRender(<GetName />, 'display')
+
+      function doRender(elem, dest)
+      {
+        ReactDOM.render(elem, document.getElementById(dest))
+      }
+    </script>
+  </head>
+  <body>
+    <div id='display' style='font-family:monospace'></div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Playing Video with JavaScript</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <video id='myvideo' width='560' height='320'>
+      <source src='movie.mp4'  type='video/mp4'>
+      <source src='movie.webm' type='video/webm'>
+      <source src='movie.ogv'  type='video/ogg'>
+    </video><br>
+
+    <button onclick='playvideo()'>Play Video</button>
+    <button onclick='pausevideo()'>Pause Video</button>
+
+    <script>
+      function playvideo()
+      {
+        O('myvideo').play()
+      }
+      function pausevideo()
+      {
+        O('myvideo').pause()
+      }
+    </script>
+  </body>
+</html>

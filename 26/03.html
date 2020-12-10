@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawing Rectangles</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='640' height='240'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+      context.fillStyle    = 'blue'
+      context.strokeStyle  = 'green'
+
+      context.fillRect(  20, 20, 600, 200)
+      context.clearRect( 40, 40, 560, 160)
+      context.strokeRect(60, 60, 520, 120)
+    </script>
+  </body>
+</html>

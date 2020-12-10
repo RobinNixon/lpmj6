@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html> <!-- jqueryasyncget.htm -->
+  <head>
+    <title>jQuery Asynchronous Get</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body style='text-align:center'>
+    <h1>Loading a web page into a DIV</h1>
+    <div id='info'>This sentence will be replaced</div>
+  
+    <script>
+      $.get('urlget.php?url=amazon.com/gp/aw', function(data)
+      {
+        $('#info').html(data)
+      } )
+    </script>
+  </body>
+</html>

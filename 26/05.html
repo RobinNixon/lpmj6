@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Different Gradient Angles</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='640' height='240'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+ 
+      gradient = context.createLinearGradient(0, 0, 160, 0)
+      gradient.addColorStop(0, 'white')
+      gradient.addColorStop(1, 'black')
+      context.fillStyle = gradient
+      context.fillRect(20, 20, 135, 200)
+
+      gradient = context.createLinearGradient(0, 0, 0, 240)
+      gradient.addColorStop(0, 'yellow')
+      gradient.addColorStop(1, 'red')
+      context.fillStyle = gradient
+      context.fillRect(175, 20, 135, 200)
+
+      gradient = context.createLinearGradient(320, 0, 480, 240)
+      gradient.addColorStop(0, 'green')
+      gradient.addColorStop(1, 'purple')
+      context.fillStyle = gradient
+      context.fillRect(330, 20, 135, 200)
+
+      gradient = context.createLinearGradient(480, 240, 640, 0)
+      gradient.addColorStop(0, 'orange')
+      gradient.addColorStop(1, 'magenta')
+      context.fillStyle = gradient
+      context.fillRect(485, 20, 135, 200)
+    </script>
+  </body>
+</html>

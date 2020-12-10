@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skewing</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='500' height='140'></canvas>
+    
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+
+      myimage     = new Image()
+      myimage.src = 'image.png'
+
+      myimage.onload = function()
+      {
+        context.drawImage(myimage,  20, 20)
+        context.transform(1, 0, 1, 1, 0, 0)
+        context.drawImage(myimage, 140, 20)
+      }
+    </script>
+  </body>
+</html>

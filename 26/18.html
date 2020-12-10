@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quadratic Curves</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='480' height='240'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+
+      context.beginPath()
+      context.moveTo(180, 60)
+      context.quadraticCurveTo(240,   0, 300,  60)
+      context.quadraticCurveTo(460,  30, 420, 100)
+      context.quadraticCurveTo(480, 210, 340, 170)
+      context.quadraticCurveTo(240, 240, 200, 170)
+      context.quadraticCurveTo(100, 200, 140, 130)
+      context.quadraticCurveTo( 40,  40, 180,  60)
+      context.fillStyle = 'white'
+      context.fill()
+      context.closePath()
+
+      // Illustrate the attractor points
+      // IE, Chrome, Opera only
+
+      // context.beginPath()
+      // context.moveTo(240,   0)
+      // context.lineTo(460,  30)
+      // context.lineTo(480, 210)
+      // context.lineTo(240, 240)
+      // context.lineTo(100, 200)
+      // context.lineTo( 40,  40)
+      // context.closePath()
+      // context.setLineDash([2,3])
+      // context.strokeStyle = 'green'
+      // context.stroke()
+     
+    </script>
+  </body>
+</html>

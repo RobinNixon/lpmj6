@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Filling a Path</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='320' height='320'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+      context.strokeStyle  = 'orange'
+      context.fillStyle    = 'yellow'
+
+      orig   = 160
+      points = 21
+      dist   = Math.PI / points * 2
+      scale1 = 150
+      scale2 = 80
+ 
+      context.beginPath()
+
+      for (j = 0 ; j < points ; ++j)
+      {
+        x = Math.sin(j * dist)
+        y = Math.cos(j * dist)
+        context.lineTo(orig + x * scale1, orig + y * scale1)
+        context.lineTo(orig + x * scale2, orig + y * scale2)
+      }
+
+      context.closePath()
+      context.stroke()
+      context.fill()
+    </script>
+  </body>
+</html>

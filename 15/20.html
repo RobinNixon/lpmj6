@@ -1,0 +1,14 @@
+<script>
+  haystack     = new Array()
+  haystack[17] = "Needle"
+
+  for (j = 0 ; j < 20 ; ++j)
+  {
+    if (haystack[j] == "Needle")
+    {
+      document.write("<br>- Found at location " + j)
+      break
+    }
+    else document.write(j + ", ")
+  }
+</script>

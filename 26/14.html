@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clipping Areas (a)</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='640' height='480'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+
+      context.beginPath()
+
+      for (j = 0 ; j < 10 ; ++j)
+      {
+        context.moveTo(20,  j * 48)
+        context.lineTo(620, j * 48)
+        context.lineTo(620, j * 48 + 30)
+        context.lineTo(20,  j * 48 + 30)
+      }
+
+      context.stroke()
+      context.closePath()
+    </script>
+  </body>
+</html>

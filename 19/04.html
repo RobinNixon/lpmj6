@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Positioning</title>
+    <style>
+      #container {
+        position  :absolute;
+        top       :50px;
+        left      :0px;
+      }
+      #object1 {
+        position  :absolute;
+        background:pink;
+        width     :100px;
+        height    :100px;
+        top       :0px;
+        left      :0px;
+      }
+      #object2 {
+        position  :relative;
+        background:lightgreen;
+        width     :100px;
+        height    :100px;
+        top       :0px;
+        left      :110px;
+      }
+      #object3 {
+        position  :fixed;
+        background:yellow;
+        width     :100px;
+        height    :100px;
+        top       :50px;
+        left      :220px;
+      }
+    </style>
+  </head>
+  <body>
+	  <br><br><br><br><br>
+    <div id='container'>
+      <div id='object1'>Absolute Positioning</div>
+      <div id='object2'>Relative Positioning</div>
+      <div id='object3'>Fixed Positioning</div>
+    </div>
+ </body>
+</html>

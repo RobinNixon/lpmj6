@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using select</title>
+
+    <script src='react.development.js'    ></script>
+    <script src='react-dom.development.js'></script>
+    <script src="babel.min.js">            </script>
+
+    <script type="text/babel">
+      class GetCountry extends React.Component
+      {
+        constructor(props)
+        {
+          super(props)
+          this.state    = {value: 'USA'}
+          this.onChange = this.onChange.bind(this)
+          this.onSubmit = this.onSubmit.bind(this)
+        }
+
+        onChange(event)
+        {
+          this.setState({value: event.target.value})
+        }
+
+        onSubmit(event)
+        {
+          alert('You selected: ' + this.state.value)
+          event.preventDefault()
+        }
+
+        render()
+        {
+          return (
+            <form onSubmit={this.onSubmit}>
+              <label>
+                Select a country:
+                <select value={this.state.value}
+                     onChange={this.onChange}>
+                  <option value="Australia">Australia</option>
+                  <option value="Canada"   >Canada</option>
+                  <option value="UK"       >United Kingdom</option>
+                  <option value="USA"      >United States</option>
+                </select>
+              </label>
+              <input type="submit" />
+            </form>
+          )
+        }
+      }
+
+      doRender(<GetCountry />, 'display')
+
+      function doRender(elem, dest)
+      {
+        ReactDOM.render(elem, document.getElementById(dest))
+      }
+    </script>
+  </head>
+  <body>
+    <div id='display' style='font-family:monospace'></div>
+  </body>
+</html>

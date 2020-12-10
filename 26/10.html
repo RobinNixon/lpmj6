@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using Text</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='800' height='160'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      context.font         = 'bold 140px Times'
+      context.textBaseline = 'top'
+      context.strokeText('WickerpediA', 0, 0)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>RSS Feed</title>
+    <link>http://website.com</link>
+    <description>website.com's RSS Feed</description>
+    <pubDate>Mon, 11 May 2020 00:00:00 GMT</pubDate>
+    <item>
+      <title>Headline</title>
+      <guid>http://website.com/headline</guid>
+      <description>This is a headline</description>
+    </item>
+    <item>
+      <title>Headline 2</title>
+      <guid>http://website.com/headline2</guid>
+      <description>The 2nd headline</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events: Further Mouse Handling</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <h2 id='test'>Pass the mouse over me</h2>
+    <script>
+      $('#test').mouseenter(function() { $(this).html('Hey, stop tickling!') } )
+      $('#test').mouseleave(function() { $(this).html('Where did you go?')   } )
+
+      // Or you can use these...
+      //
+      // $('#test').mouseover(function() { $(this).html('Cut it out!')         } )
+      // $('#test') .mouseout(function() { $(this).html('Try it this time...') } )
+
+      // This...
+      //
+      // $('#test').hover(function() { $(this).html('Cut it out!')         },
+      //                  function() { $(this).html('Try it this time...') } )
+
+      // Or this...
+      //
+      // $('#test').mouseover(function() { $(this).html('Cut it out!')         } )
+      //            .mouseout(function() { $(this).html('Try it this time...') } )
+    </script>
+  </body>
+</html>

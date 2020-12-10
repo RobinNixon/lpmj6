@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events: click & dblclick</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <h2>Click and double click the buttons</h2>
+    <button class='myclass'>Button 1</button>
+    <button class='myclass'>Button 2</button>
+    <button class='myclass'>Button 3</button>
+    <button class='myclass'>Button 4</button>
+    <button class='myclass'>Button 5</button>
+    <script>
+      $('.myclass')   .click( function() { $(this).slideUp() })
+      $('.myclass').dblclick( function() { $(this).hide()    })
+
+      // Alternative using named functions instead
+      //
+      // $('.myclass').click(doslide)
+      // function doslide() 
+      // {
+      //   $(this).slideUp()
+      // }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selection Traversal</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li id='new'>Item 3</li>
+      <li>Item 4
+        <ol type='a'>
+          <li>Item 4a</li>
+          <li>Item 4b</li>
+        </ol></li>
+      <li>Item 5</li>
+    </ul>
+    <script>
+      $('ul>li').first()        .css('text-decoration', 'underline')
+      $('ul>li').last()         .css('font-style',      'italic')
+      $('ul>li').eq(1)          .css('font-weight',     'bold')
+      $('ul>li').filter(':even').css('background',      'cyan')
+      $('ul>li').not('#new')    .css('color',           'blue')
+      $('ul>li').has('ol')      .css('text-decoration', 'line-through')
+
+      //test = $('ul>li').eq(2)
+      //if ($(test).is('#new'))
+      //  $(test).css('font-size', '120%')
+    </script>
+  </body>
+</html>

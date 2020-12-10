@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using JavaScript Cookies</title>
+    <script>
+      function SaveCookie(name, value, seconds, path, domain, secure)
+      {
+        var date = new Date()
+        date.setTime(date.getTime() + seconds * 1000)
+
+        var expires = seconds ? ';expires=' + date.toGMTString() : ''
+        path        = path    ? ';path='    + path               : ''
+        domain      = domain  ? ';domain='  + domain             : ''
+        secure      = secure  ? ';secure'                        : ''
+        document.cookie = name + '=' + escape(value) + expires + path + domain + secure
+      }
+
+      function ReadCookie(name)
+      {
+        var dc    = ';' + document.cookie
+        var start = dc.indexOf(';' + name + '=')
+        
+        if (start == -1) return false
+        
+        start  += name.length + 1
+        var end = dc.indexOf(';', start)
+        end     = (end == -1) ? dc.length : end
+        
+        return unescape(dc.substring(start, end))
+      }
+
+      function DeleteCookie(name)
+      {
+        SaveCookie(name, '', -60)
+      }
+    </script>
+  </head>
+  <body>
+    <p>The first time this page loads no cookie should have been set and the alert window should show that the cookie with the name <b>test</b> has the value <i>false</i> (meaning it is not set).</p>
+    <p>After you click OK a value is assigned to the cookie <b>test</b>. To see this new cookie's value click Reload.</p>
+    <script>
+      alert("The value of the cookie 'test' is: " + ReadCookie('test'))
+      SaveCookie('test', 'I love cookies')
+    </script>
+  </body>
+</html>

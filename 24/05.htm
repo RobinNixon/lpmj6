@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A simple clock</title>
+
+    <script src='react.development.js'    ></script>
+    <script src='react-dom.development.js'></script>
+    <script src="babel.min.js">            </script>
+
+    <script type="text/babel">
+      class Clock extends React.Component
+      {
+        constructor(props)
+        {
+          super(props)
+          this.state = {date: new Date()}
+        }
+
+        componentDidMount()
+        {
+          this.timerID = setInterval(() => this.tick(), 1000)
+        }
+
+        componentWillUnmount()
+        {
+          clearInterval(this.timerID)
+        }
+
+        tick()
+        {
+          this.setState({date: new Date()})
+        }
+
+        render()
+        {
+          return <span> {this.state.date.toLocaleTimeString()} </span>
+        }
+      }
+
+      doRender(<Clock />, 'the_time')
+
+      function doRender(elem, dest)
+      {
+        ReactDOM.render(elem, document.getElementById(dest))
+      }
+    </script>
+  </head>
+  <body>
+    <p style='font-family:monospace'>The time is: <span id="the_time"></span></p>
+  </body>
+</html>

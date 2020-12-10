@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manipulating Image Data</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='640' height='200'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+
+      myimage             = new Image()
+      myimage.src         = 'photo.jpg'
+      myimage.crossOrigin = ''
+
+      myimage.onload = function()
+      {
+        context.drawImage(myimage, 0, 0)
+        idata = context.getImageData(0, 0, myimage.width, myimage.height)
+
+        for (y = 0 ; y < myimage.height ; ++y)
+        {
+          for (x = 0 ; x < myimage.width ; ++x)
+          {
+            pos     = y * myimage.width * 4 + x * 4
+            average =
+            (
+              idata.data[pos]     +
+              idata.data[pos + 1] +
+              idata.data[pos + 2]
+            ) / 3
+
+            idata.data[pos]     = average + 50
+            idata.data[pos + 1] = average
+            idata.data[pos + 2] = average - 50
+          }
+        }
+        context.putImageData(idata, 320, 0)
+      }
+    </script>
+  </body>
+</html>

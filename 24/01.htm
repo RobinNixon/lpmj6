@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using a class</title>
+
+    <script src='react.development.js'    ></script>
+    <script src='react-dom.development.js'></script>
+    <script src="babel.min.js">            </script>
+
+    <script type="text/babel">
+      class One extends React.Component
+      {
+        render()
+        {
+          return <p>By Jeeves, it works!</p>
+        }
+      }
+      
+      ReactDOM.render(<One />, document.getElementById('div1'))
+    </script>
+  </head>
+  <body>
+    <div id="div1" style='font-family:monospace'></div>
+  </body>
+</html>

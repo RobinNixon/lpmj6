@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Copying a Canvas</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='320' height='240'>
+      This is a canvas element given the ID <i>mycanvas</i>
+      This text is only visible in non-HTML5 browsers
+    </canvas>
+
+    <img id='myimage'>
+
+    <script>
+      canvas            = O('mycanvas')
+      context           = canvas.getContext('2d')
+      context.fillStyle = 'red'
+      S(canvas).border  = '1px solid black'
+
+      context.beginPath()
+      context.moveTo(160, 120)
+      context.arc(160, 120, 70, 0, Math.PI * 2, false)
+      context.closePath()
+      context.fill()
+
+      S('myimage').border = '1px solid black'
+      O('myimage').src    = canvas.toDataURL()
+    </script>
+  </body>
+</html>

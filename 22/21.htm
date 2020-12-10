@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Traversal: Parents</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <section>
+          <blockquote>
+            <ul>
+              <li>Item 1</li>
+              <li id='elem'>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </blockquote>
+        </section>
+      </div>
+      <div>
+        <section>
+          <blockquote>
+            <ul>
+              <li>Item 1</li>
+              <li>Item 2</li>
+              <li>Item 3</li>
+            </ul>
+          </blockquote>
+        </section>
+      </div>
+    </div>
+    <script>
+      $('#elem').parents('div')     .css('background',      'yellow')
+      $('#elem').parentsUntil('div').css('text-decoration', 'underline')
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adding Shadows</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='480' height='190'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+
+      myimage     = new Image()
+      myimage.src = 'apple.png'
+
+      orig   = 95
+      points = 21
+      dist   = Math.PI / points * 2
+      scale1 = 75
+      scale2 = 50
+
+      myimage.onload = function()
+      {
+        context.beginPath()
+
+        for (j = 0 ; j < points ; ++j)
+        {
+          x = Math.sin(j * dist)
+          y = Math.cos(j * dist)
+          context.lineTo(orig + x * scale1, orig + y * scale1)
+          context.lineTo(orig + x * scale2, orig + y * scale2)
+        }
+
+        context.closePath()
+
+        context.shadowOffsetX = 5
+        context.shadowOffsetY = 5
+        context.shadowBlur    = 6
+        context.shadowColor   = '#444'
+        context.fillStyle     = 'red'
+        context.stroke()
+        context.fill()
+
+        context.shadowOffsetX = 2
+        context.shadowOffsetY = 2
+        context.shadowBlur    = 3
+        context.shadowColor   = 'yellow'
+        context.font          = 'bold 36pt Times'
+        context.textBaseline  = 'top'
+        context.fillStyle     = 'green'
+        context.fillText('Sale now on!', 200, 5)
+
+        context.shadowOffsetX = 3
+        context.shadowOffsetY = 3
+        context.shadowBlur    = 5
+        context.shadowColor   = 'black'
+        context.drawImage(myimage, 245, 45)
+      }
+    </script>
+  </body>
+</html>

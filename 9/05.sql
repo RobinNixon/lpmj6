@@ -1,0 +1,2 @@
+ROLLBACK;
+SELECT * FROM accounts;

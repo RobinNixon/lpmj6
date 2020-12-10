@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Effects: hide & show</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <button id='hide'>Hide</button>
+    <button id='show'>Show</button>
+    <p id='text'>Click the Hide and Show buttons</p>
+    <script>
+      $('#hide').click(function() { $('#text').hide('slow', 'linear') })
+      $('#show').click(function() { $('#text').show('slow', 'linear') })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <script>
+      if (typeof localStorage == 'undefined')
+      {
+        alert("Local storage is not available")
+      }
+      else
+      {
+        loc = localStorage.getItem('loc')
+        lan = localStorage.getItem('lan')
+        alert("The current values of 'loc' and 'lan' are\n\n" +
+          loc + " / " + lan + "\n\nClick OK to assign values")
+
+        localStorage.setItem('loc', 'USA')
+        localStorage.setItem('lan', 'English')
+        loc = localStorage.getItem('loc')
+        lan = localStorage.getItem('lan')
+        alert("The current values of 'loc' and 'lan' are\n\n" +
+          loc + " / " + lan +  "\n\nClick OK to clear values")
+
+        localStorage.removeItem('loc')
+        localStorage.removeItem('lan')
+        loc = localStorage.getItem('loc')
+        lan = localStorage.getItem('lan')
+        alert("The current values of 'loc' and 'lan' are\n\n" +
+          loc + " / " + lan)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Using each & map</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <div id='info'></div>
+    <script>
+      pets =
+      {
+        Scratchy : 'Guinea Pig',
+        Squeeky  : 'Guinea Pig',
+        Fluffy   : 'Rabbit',
+        Thumper  : 'Rabbit',
+        Snoopy   : 'Dog',
+        Tiddles  : 'Cat'
+      }
+
+      guineapigs = []
+      
+      $.each(pets, function(name, type)
+      {
+        if (type == 'Guinea Pig') guineapigs.push(name)
+      })
+
+      // Alternate version using $.map
+      //
+      // guineapigs = $.map(pets, function(type, name)
+      // {
+      //   if (type == 'Guinea Pig') return name
+      // })
+
+      $('#info').html('The guinea pig names are: ' + guineapigs.join(' & '))
+    </script>
+  </body>
+</html>

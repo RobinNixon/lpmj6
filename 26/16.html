@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawing Arcs</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='640' height='480'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+      context.lineWidth    = 2
+      context.strokeStyle  = 'blue'
+
+      Math.degreesToRadians = function(degrees)
+      {
+        return degrees * Math.PI / 180
+      }
+
+      // Following is the original example code
+      //
+      // arcs =
+      // [
+      //   Math.PI,
+      //   Math.PI * 2,
+      //   Math.PI / 2,
+      //   Math.PI / 180 * 59
+      // ]
+      //
+      // Below the code now uses degrees as arguments
+
+      arcs =
+      [
+        Math.degreesToRadians(180),
+        Math.degreesToRadians(360),
+        Math.degreesToRadians(90),
+        Math.degreesToRadians(59)
+      ]
+
+      for (j = 0 ; j < 4 ; ++j)
+      {
+        context.beginPath()
+        context.arc(80 + j * 160, 80, 70, 0, arcs[j])
+        context.closePath()
+        context.stroke()
+      }
+      
+      context.strokeStyle = 'red'
+
+      for (j = 0 ; j < 4 ; ++j)
+      {
+        context.beginPath()
+        context.arc(80 + j * 160, 240, 70, 0, arcs[j])
+        context.stroke()
+        context.closePath()
+      }
+
+      context.strokeStyle = 'green'
+
+      for (j = 0 ; j < 4 ; ++j)
+      {
+        context.beginPath()
+        context.arc(80 + j * 160, 400, 70, 0, arcs[j], true)
+        context.stroke()
+        context.closePath()
+      }
+    </script>
+  </body>
+</html>

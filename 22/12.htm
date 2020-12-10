@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Effects: toggle</title>
+    <script src='jquery-3.5.1.min.js'></script>
+  </head>
+  <body>
+    <button id='toggle'>Toggle</button>
+    <p id='text'>Click the Toggle button</p>
+    <script>
+      $('#toggle').click(function() { $('#text').toggle('slow', 'linear') })
+    </script>
+  </body>
+</html>

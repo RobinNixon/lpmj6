@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The arcTo Method</title>
+    <script src='OSC.js'></script>
+  </head>
+  <body>
+    <canvas id='mycanvas' width='480' height='240'></canvas>
+
+    <script>
+      canvas               = O('mycanvas')
+      context              = canvas.getContext('2d')
+      S(canvas).background = 'lightblue'
+      context.strokeStyle  = 'blue'
+
+      for (j = 0 ; j <= 280 ; j += 40)
+      {
+        context.beginPath()
+        context.moveTo( 20, 20)
+        context.arcTo(240, 240, 460, 20, j)
+        context.lineTo(460, 20)
+        context.stroke()
+        context.closePath()
+      }    
+    </script>
+  </body>
+</html>

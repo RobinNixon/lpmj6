@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Using lists</title>
+
+    <script src='react.development.js'    ></script>
+    <script src='react-dom.development.js'></script>
+    <script src="babel.min.js">            </script>
+
+    <script type="text/babel">
+      const cats       = ['lion', 'tiger', 'cheetah', 'lynx']
+      const listofCats = cats.map((cat) => <li>{cat}</li>)
+      
+      doRender(<ul>{listofCats}</ul>, 'display')
+
+      function doRender(elem, dest)
+      {
+        ReactDOM.render(elem, document.getElementById(dest))
+      }
+    </script>
+  </head>
+  <body>
+    <div id='display' style='font-family:monospace'></div>
+  </body>
+</html>
