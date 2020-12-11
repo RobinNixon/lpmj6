@@ -1,4 +1,4 @@
-<h1>Learning PHP, MySQL & JavaScript<br>(with PHP 8 & MySQL 8 and React) 6th Edition</h1>
+<h1>Learning PHP, MySQL & JavaScript (with PHP 8, MySQL 8, PDO, and React) 6th Edition</h1>
 
 <h2>Thanks for downloading these examples</h2>
 
