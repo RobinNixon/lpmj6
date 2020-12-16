@@ -1,8 +1,8 @@
-<h1 style='font-color:blue'>Learning PHP, MySQL & JavaScript (with PHP 8, MySQL 8, PDO, and React) 6th Edition - to be published in spring 2021</h1>
+<h1 style='color:#00f;'>Learning PHP, MySQL & JavaScript (with PHP 8, MySQL 8, PDO, and React) 6th Edition - to be published in spring 2021</h1>
 
 <h2>Thanks for downloading these examples</h2>
 
-(<b style='font-color:green'>The examples for earlier editions are in <i>lpmj1examples.zip</i> through <i>lpmj5examples.zip</i>)
+(<b style='color:#0f0;'>The examples for earlier editions are in <i>lpmj1examples.zip</i> through <i>lpmj5examples.zip</i>)
 
 </b><p>All the files are in the folders named <i>03</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://ampps.com/'>Ampps</a>) to run many of the examples - please see <i>Chapter 2</i> for full details.</p>
 
