@@ -2,7 +2,7 @@
 
 <h2>Thanks for downloading these examples</h2>
 
-(<b>The examples for earlier editions are in <i>lpmj1examples.zip</i> through <i>lpmj5examples.zip</i>)
+🔴 <b>The examples for earlier editions are in <i>lpmj1examples.zip</i> through <i>lpmj5examples.zip</i> 🔴
 
 </b><p>All the files are in the folders named <i>03</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://ampps.com/'>Ampps</a>) to run many of the examples - please see <i>Chapter 2</i> for full details.</p>
 
