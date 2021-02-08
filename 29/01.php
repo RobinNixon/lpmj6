@@ -61,9 +61,9 @@
 
     $result = queryMysql("SELECT * FROM profiles WHERE user='$user'");
 
-    if ($result->num_rows)
+    if ($result->rowCount())
     {
-      $row = $result->fetch_array(MYSQLI_ASSOC);
+      $row = $result->fetch();
       echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
     }
     else echo "<p>Nothing to see here, yet</p><br>";
