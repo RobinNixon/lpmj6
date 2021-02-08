@@ -1,1 +1,1 @@
-There are no examples fro this chapter.
+There are no examples for this chapter.
