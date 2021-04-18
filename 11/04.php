@@ -1,4 +1,4 @@
-<?php // query-pdo.php
+<?php // query.php
   require_once 'login.php';
 
   try

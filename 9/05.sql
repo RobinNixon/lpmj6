@@ -1,2 +1,0 @@
-ROLLBACK;
-SELECT * FROM accounts;

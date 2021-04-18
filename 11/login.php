@@ -1,6 +1,6 @@
 <?php // login.php
-  $host = 'localhost';
-  $data = 'publications';
+  $host = 'localhost';    // Change as necessary
+  $data = 'publications'; // Change as necessary
   $user = 'root';         // Change as necessary
   $pass = 'mysql';        // Change as necessary
   $chrs = 'utf8mb4';

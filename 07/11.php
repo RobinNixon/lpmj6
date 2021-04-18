@@ -3,7 +3,7 @@
   $text = fgets($fh);
 
   fseek($fh, 0, SEEK_END);
-  fwrite($fh, "$text") or die("Could not write to file");
+  fwrite($fh, "\n$text") or die("Could not write to file");
   fclose($fh);
 
   echo "File 'testfile.txt' successfully updated";

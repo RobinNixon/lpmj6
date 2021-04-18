@@ -1,5 +1,5 @@
 <?php // exec.php
-  $cmd = "dir";   // Windows
+  $cmd = "dir";   // Windows, Mac, Linux
   // $cmd = "ls"; // Linux, Unix & Mac
 
   exec(escapeshellcmd($cmd), $output, $status);
