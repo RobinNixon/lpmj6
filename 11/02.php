@@ -5,8 +5,8 @@
   {
     $pdo = new PDO($attr, $user, $pass, $opts);
   }
-  catch (\PDOException $e)
+  catch (PDOException $e)
   {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    throw new PDOException($e->getMessage(), (int)$e->getCode());
   }
 ?>

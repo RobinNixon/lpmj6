@@ -19,25 +19,24 @@
         return degrees * Math.PI / 180
       }
 
-      // Following is the original example code
-      //
-      // arcs =
-      // [
-      //   Math.PI,
-      //   Math.PI * 2,
-      //   Math.PI / 2,
-      //   Math.PI / 180 * 59
-      // ]
-      //
-      // Below the code now uses degrees as arguments
-
       arcs =
       [
-        Math.degreesToRadians(180),
-        Math.degreesToRadians(360),
-        Math.degreesToRadians(90),
-        Math.degreesToRadians(59)
+        Math.PI,
+        Math.PI * 2,
+        Math.PI / 2,
+        Math.PI / 180 * 59
       ]
+
+      // This code below uses degrees as arguments as shown
+      // later in the chapter
+
+      // arcs =
+      // [
+      //   Math.degreesToRadians(180),
+      //   Math.degreesToRadians(360),
+      //   Math.degreesToRadians(90),
+      //   Math.degreesToRadians(59)
+      // ]
 
       for (j = 0 ; j < 4 ; ++j)
       {

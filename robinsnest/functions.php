@@ -1,8 +1,8 @@
 <?php // Example 01: functions.php
   $host = 'localhost';    // Change as necessary
-  $data = 'publications'; // Change as necessary
-  $user = 'root';         // Change as necessary
-  $pass = 'mysql';        // Change as necessary
+  $data = 'robinsnest';   // Change as necessary
+  $user = 'robinsnest';   // Change as necessary
+  $pass = 'password';     // Change as necessary
   $chrs = 'utf8mb4';
   $attr = "mysql:host=$host;dbname=$data;charset=$chrs";
   $opts =
@@ -16,9 +16,9 @@
   {
     $pdo = new PDO($attr, $user, $pass, $opts);
   }
-  catch (\PDOException $e)
+  catch (PDOException $e)
   {
-    throw new \PDOException($e->getMessage(), (int)$e->getCode());
+    throw new PDOException($e->getMessage(), (int)$e->getCode());
   }
 
   function createTable($name, $query)
@@ -59,13 +59,13 @@
     if (file_exists("$user.jpg"))
       echo "<img src='$user.jpg' style='float:left;'>";
 
-    $result = queryMysql("SELECT * FROM profiles WHERE user='$user'");
+    $result = $pdo->query("SELECT * FROM profiles WHERE user='$user'");
 
-    if ($result->num_rows)
+    while ($row = $result->fetch())
     {
-      $row = $result->fetch_array(MYSQLI_ASSOC);
-      echo stripslashes($row['text']) . "<br style='clear:left;'><br>";
+      die(stripslashes($row['text']) . "<br style='clear:left;'><br>");
     }
-    else echo "<p>Nothing to see here, yet</p><br>";
+    
+    echo "<p>Nothing to see here, yet</p><br>";
   }
 ?>
