@@ -8,7 +8,7 @@
 
 <p>As well as being saved in their chapter number folder, the Robin's Nest example files are also in the folder <i>robinsnest</i>, so that you can copy the folder to a web server to try for yourself. Please read the final chapter for details on setting up the database etc. All the other information you need to run, understand and modify these examples can be found in the book.</p>
 
-<p>For the latest news on this book, including any errata that have been discovered since its publication (and any updates to these files), please <a href='https://github.com/RobinNixon/lpmj6'>visit GitHub</a>.
+<p>For the latest news on this book, including any errata that have been discovered since its publication (and any updates to these files), please <a href='https://oreil.ly/learning-php-mysql-js-6e'>visit the O'Reilly page</a>.
 
 <p>To read the examples as you work through the book you can view them here in a folder structure matching the chapters in the book.</p>
 
