@@ -13,8 +13,7 @@
       let url     = "rss.news.yahoo.com/rss/topstories"
       let XHR     = new XMLHttpRequest()
     
-      XHR.open("POST", "http://127.0.0.1/18/xmlget.php?url=" + url + nocache, true)
-      XHR.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+      XHR.open("GET", "http://127.0.0.1/18/xmlget.php?url=" + url + nocache, true)
       XHR.send()
 
       XHR.onreadystatechange = function()

@@ -11,8 +11,7 @@
       let nocache = "&nocache=" + Math.random() * 1000000
       let XHR     = new XMLHttpRequest()
 
-      XHR.open("POST", "http://127.0.0.1/18/urlget.php?url=news.com" + nocache, true)
-      XHR.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
+      XHR.open("GET", "http://127.0.0.1/18/urlget.php?url=news.com" + nocache, true)
       XHR.send()
 
       XHR.onreadystatechange = function()
