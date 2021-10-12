@@ -12,7 +12,7 @@
 
   $user  = mysql_entities_fix_string($pdo, $_POST['user']);
   $pass  = mysql_entities_fix_string($pdo, $_POST['pass']);
-  $query = "SELECT * FROM users WHERE user='$user' AND pass='$pass'";
+  $query = "SELECT * FROM users WHERE user=$user AND pass=$pass";
 
   //Etc…
 
