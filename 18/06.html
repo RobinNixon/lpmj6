@@ -6,13 +6,13 @@
   <body>
     <h1>Loading XML data into a DIV</h1>
     <div id='info'>This sentence will be replaced</div>
-  
+
     <script>
-      let out     = ''
+      let out = ''
       let nocache = "&nocache=" + Math.random() * 1000000
-      let url     = "rss.news.yahoo.com/rss/topstories"
-      let XHR     = new XMLHttpRequest()
-    
+      let url = "rss.news.yahoo.com/rss/topstories"
+      let XHR = new XMLHttpRequest()
+
       XHR.open("POST", "http://127.0.0.1/18/xmlget.php?url=" + url + nocache, true)
       XHR.setRequestHeader("Content-type", "application/x-www-form-urlencoded")
       XHR.send()
@@ -21,15 +21,15 @@
       {
         if (this.readyState == 4 && this.status == 200)
         {
-           let titles = this.responseXML.getElementsByTagName('title')
+          let titles = this.responseXML.getElementsByTagName('title')
 
-           for (let j = 0 ; j < titles.length ; ++j)
-           {
-             out += titles[j].childNodes[0].nodeValue + '<br>'
-           }
-           document.getElementById('info').innerHTML = out  
+          for (let j = 0 ; j < titles.length ; ++j)
+          {
+            out += titles[j].childNodes[0].nodeValue + '<br>'
+          }
+          document.getElementById('info').innerHTML = out
         }
-      }      
+      }
     </script>
   </body>
 </html>

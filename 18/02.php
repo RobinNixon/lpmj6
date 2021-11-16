@@ -3,8 +3,7 @@
   {
     echo file_get_contents('http://' . SanitizeString($_POST['url']));
   }
-  
-  function SanitizeString($var)
+    function SanitizeString($var)
   {
     $var = strip_tags($var);
     $var = htmlentities($var);
