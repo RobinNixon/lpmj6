@@ -27,16 +27,20 @@
 
   $result = queryMysql("SELECT * FROM friends WHERE user='$view'");
 
+  $j = 0;
+  
   while ($row = $result->fetch())
   {
-    $followers[$j] = $row['friend'];
+    $followers[$j+] = $row['friend'];
   }
 
   $result = queryMysql("SELECT * FROM friends WHERE friend='$view'");
 
+  $j = 0;
+
   while ($row = $result->fetch())
   {
-    $following[$j] = $row['user'];
+    $following[$j++] = $row['user'];
   }
 
   $mutual    = array_intersect($followers, $following);

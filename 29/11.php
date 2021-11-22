@@ -55,6 +55,7 @@ _END;
     
     $query  = "SELECT * FROM messages WHERE recip='$view' ORDER BY time DESC";
     $result = queryMysql($query);
+    $num    = $result->rowCount();
 
     while ($row = $result->fetch())
     {
