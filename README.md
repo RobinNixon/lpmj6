@@ -12,7 +12,7 @@
 
 <h2>Using the Example Files</h2>
     
-<p>All the files are in the folders named <i>03</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://ampps.com/'>Ampps</a>) to run many of the examples - please see <i>Chapter 2</i> for full details.</p>
+<p>All the files are in the folders named <i>03</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://mamp.info/'>MAMP</a>) to run many of the examples - <i>Chapter 2</i> details how to install Ampps, but see above as this is now considered out of date.</p>
 
 <p><i>Please note that Mac and Linux users should scroll a little down the Download page at the AMPPS website to find the Old Versions section for your download files.</i></p>
 
