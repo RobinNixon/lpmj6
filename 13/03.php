@@ -37,7 +37,7 @@
 
   function add_user($pdo, $fn, $sn, $un, $pw)
   {
-    $stmt = $pdo->prepare('INSERT INTO users VALUES(?,?,?,?)');
+    $stmt = $pdo->prepare('INSERT INTO users(forename,surname,username,password) VALUES(?,?,?,?)');
 
     $stmt->bindParam(1, $fn, PDO::PARAM_STR,  32);
     $stmt->bindParam(2, $sn, PDO::PARAM_STR,  32);
