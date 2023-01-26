@@ -19,7 +19,7 @@
     $name3 = "$view is";
   }
 
-  // Uncomment this line if you wish the user’s profile to show here
+  // Uncomment this line if you wish the userï¿½s profile to show here
   // showProfile($view);
 
   $followers = array();
@@ -31,7 +31,7 @@
   
   while ($row = $result->fetch())
   {
-    $followers[$j+] = $row['friend'];
+    $followers[$j++] = $row['friend'];
   }
 
   $result = queryMysql("SELECT * FROM friends WHERE friend='$view'");
