@@ -31,7 +31,7 @@
   
   while ($row = $result->fetch())
   {
-    $followers[$j+] = $row['friend'];
+    $followers[$j++] = $row['friend'];
   }
 
   $result = queryMysql("SELECT * FROM friends WHERE friend='$view'");
