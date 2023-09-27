@@ -6,13 +6,9 @@
 
 <h2>IMPORTANT INFORMATION</h2>
 
-<b><p>As of 2022 I no-longer recommend the AMPPS web server stack. Firstly, version 4.0 on Windows is supposed to be stable but I have found numerous issues on a number of different PCs and believe it is still not ready for full release. Furthermore, although the installer is reduced in size, you now have to install all the features you need yourself, and this can be a confusing matter. Also, I have been unable to make AMPPS work on recent MacOS computers.</p>
-
-<p>Therefore I now recommend <a href='http://mamp.info'>MAMP</a> for both Windows and MacOS. It is quick and easy to install and works well. You should be able to set it up without too much trouble, and future editions of the book will include a walk-through to make it even easier.</p></b>
-
 <h2>Using the Example Files</h2>
     
-<p>All the files are in the folders named <i>03</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://mamp.info/'>MAMP</a>) to run many of the examples - <i>Chapter 2</i> details how to install Ampps, but see above as this is now considered out of date.</p>
+<p>All the files are in the folders named <i>03</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://ampps.com'>AMPPS</a>) to run many of the examples - <i>Chapter 2</i> details how to install <i>AMPPS</i>.</p>
 
 <p><i>Please note that Mac and Linux users should scroll a little down the Download page at the AMPPS website to find the Old Versions section for your download files.</i></p>
 
