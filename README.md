@@ -4,8 +4,6 @@
 
 🔴 <b>The examples for earlier editions are in <i>lpmj1examples.zip</i> through <i>lpmj5examples.zip</i></b> 🔴
 
-<h2>IMPORTANT INFORMATION</h2>
-
 <h2>Using the Example Files</h2>
     
 <p>All the files are in the folders named <i>03</i> through <i>29</i> of this archive, according to the chapters from which they are taken. You will need a web server installed (such as <a href='http://ampps.com'>AMPPS</a>) to run many of the examples - <i>Chapter 2</i> details how to install <i>AMPPS</i>.</p>
