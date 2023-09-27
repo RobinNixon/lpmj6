@@ -49,9 +49,7 @@
 
     $var = strip_tags($var);
     $var = htmlentities($var);
-
-    if (get_magic_quotes_gpc())
-      $var = stripslashes($var);
+    $var = stripslashes($var);
 
     $result = $pdo->quote($var);          // This adds single quotes
     return str_replace("'", "", $result); // So now remove them
