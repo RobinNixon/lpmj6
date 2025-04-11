@@ -8,4 +8,5 @@
 
   - $author.
 _END;
+echo $out;
 ?>
